@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hariharan V — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --accent: #0b5ed7;
+      --dark: #000;
+      --light: #fff;
+      --muted: #6b7280;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Poppins',sans-serif;background:#fff;color:var(--dark);}
+    a{text-decoration:none;color:inherit;}
+
+    /* NAVBAR */
+    nav{
+      position:fixed;width:100%;
+      background:var(--dark);
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 40px;z-index:1000;
+    }
+    nav h1{color:var(--light);font-size:18px;font-weight:700;}
+    nav ul{list-style:none;display:flex;gap:24px;}
+    nav ul li a{color:var(--light);font-size:14px;transition:.3s;}
+    nav ul li a:hover{color:var(--accent);}
+
+    /* HERO */
+    header{
+      background:var(--dark);color:var(--light);
+      min-height:100vh;display:flex;flex-direction:column;
+      justify-content:center;align-items:center;text-align:center;
+      padding:80px 20px;
+    }
+    header h2{font-size:22px;margin-bottom:14px;}
+    header h1{font-size:42px;font-weight:700;margin-bottom:10px;}
+    header h3{font-size:20px;color:var(--accent);font-weight:600;
+      border-right:2px solid var(--accent);white-space:nowrap;
+      overflow:hidden;animation:typing 3s steps(20) infinite alternate;}
+    @keyframes typing{from{width:0;}to{width:15ch;}}
+
+    /* ABOUT */
+    section{max-width:1000px;margin:0 auto;padding:100px 20px;}
+    #about{display:flex;flex-wrap:wrap;gap:40px;align-items:center;justify-content:center;}
+    .about-left img{width:220px;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,0.2);}
+    .about-left{flex:1;min-width:250px;text-align:center;}
+    .about-right{flex:2;min-width:280px;}
+    .about-right h2{font-size:22px;margin-bottom:10px;color:var(--dark);border-bottom:3px solid var(--accent);display:inline-block;padding-bottom:4px;}
+    .info{margin-bottom:16px;font-size:15px;color:var(--muted);}
+    .info strong{color:var(--dark);}
+    .contact-icons{margin-top:10px;font-size:15px;}
+    .contact-icons i{color:var(--accent);width:22px;text-align:center;}
+
+    /* EXPERIENCE + EDUCATION TIMELINE */
+    #experience{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+    .timeline{border-left:3px solid var(--accent);padding-left:20px;position:relative;}
+    .timeline::before{content:"";position:absolute;left:-9px;top:0;width:16px;height:16px;background:var(--light);border:3px solid var(--accent);border-radius:50%;}
+    .timeline h3{font-size:16px;color:var(--dark);margin-bottom:6px;}
+    .timeline h4{font-size:15px;color:var(--accent);margin-bottom:6px;}
+    .timeline small{color:var(--muted);}
+    .timeline p{font-size:14px;color:var(--muted);margin:10px 0;}
+    .timeline ul{margin:6px 0 12px 20px;color:var(--muted);font-size:14px;}
+    .timeline li{margin-bottom:6px;}
+
+    /* TOOLS USED */
+    #tools{text-align:center;}
+    #tools h2{font-size:22px;margin-bottom:20px;color:var(--accent);}
+    .tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;align-items:center;justify-items:center;}
+    .tool-grid img{width:80px;height:80px;object-fit:contain;transition:transform .3s;}
+    .tool-grid img:hover{transform:scale(1.1);}
+
+    /* FOOTER */
+    footer{background:var(--dark);color:var(--light);text-align:center;padding:40px 0;}
+    .social-icons a{color:var(--light);margin:0 10px;font-size:18px;transition:.3s;}
+    .social-icons a:hover{color:var(--accent);}
+    footer p{margin-top:14px;font-size:13px;color:var(--muted);}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      nav{flex-direction:column;padding:12px;}
+      nav ul{flex-wrap:wrap;justify-content:center;gap:14px;}
+      header h1{font-size:32px;} header h3{font-size:18px;}
+      #about{flex-direction:column;text-align:center;}
+      #experience{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <h1>Hello Everyone !!</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home">
+    <h2>Hello Everyone !!</h2>
+    <h1>I am Hari</h1>
+    <h3>Digital Marketing Analyst</h3>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-left">
+      <img src="asset/hari-img.jpeg" alt="Hariharan V" />
+    </div>
+    <div class="about-right">
+      <h2>About Me</h2>
+      <p class="info">
+        Results-driven Digital Marketing Analyst with 2.5+ years of practical experience in SEM/PPC, SEO (on-page & off-page),
+        SMM, content marketing, and e-commerce SEO. Skilled in leveraging Google Ads, Search Console, SEMrush, GTM, and Analytics
+        to enhance online visibility and drive targeted traffic.
+      </p>
+      <div class="contact-icons">
+        <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:hariharan6369001260@gmail.com">hariharan6369001260@gmail.com</a></p>
+        <p><i class="fa-solid fa-phone"></i> <strong>Mobile:</strong> <a href="tel:+916369001260">+91 63690 01260</a></p>
+        <p><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Chennai, India</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & EDUCATION -->
+  <section id="experience">
+    <div>
+      <h2 style="color:var(--accent);margin-bottom:16px;">Professional Experience</h2>
+      <div class="timeline">
+        <h3>Digital Marketing Executive & SEO Analyst</h3>
+        <h4>Ticknetwork</h4>
+        <small>Apr 2024 – Present | Chennai</small>
+        <ul>
+          <li>Handled digital marketing team and trained 10+ interns.</li>
+          <li>Monitored SEO activities, e-commerce SEO and Google Ads campaigns.</li>
+          <li>Coordinated with web development teams (WordPress, Shopify, PHP).</li>
+          <li>Tools: GA, GSC, SEMrush, GTM, Screaming Frog.</li>
+        </ul>
+      </div>
+
+      <div class="timeline">
+        <h3>Digital Marketing Executive (SEO)</h3>
+        <h4>eGrove Systems</h4>
+        <small>Sep 2023 – Mar 2024 | Chennai</small>
+        <ul>
+          <li>Handled off-page SEO and backlink campaigns.</li>
+          <li>Performed SEO audits and keyword research for multiple clients.</li>
+          <li>Worked closely with developers for technical SEO improvements.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h2 style="color:var(--accent);margin-bottom:16px;">Education</h2>
+      <div class="timeline">
+        <h3>B.Com (Accounting & Finance)</h3>
+        <h4>Sri Ram College of Arts & Science</h4>
+        <small>2020 – 2023 | Chennai</small>
+        <p>Graduated with a focus on accounting principles, business finance, and marketing fundamentals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="tools">
+    <h2>Tools Used</h2>
+    <div class="tool-grid">
+      <img src="asset/google-ads.png" alt="Google Ads">
+      <img src="asset/search-console.png" alt="Search Console">
+      <img src="asset/semrush.png" alt="SEMrush">
+      <img src="asset/gtm.png" alt="Google Tag Manager">
+      <img src="asset/wordpress.png" alt="WordPress">
+      <img src="asset/shopify.png" alt="Shopify">
+      <img src="asset/screaming-frog.png" alt="Screaming Frog">
+      <img src="asset/canva.png" alt="Canva">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="https://linkedin.com/in/hari-haran-a84201275" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:hariharan6369001260@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="tel:+916369001260"><i class="fa-solid fa-phone"></i></a>
+    </div>
+    <p>© 2025 Hariharan V — Digital Marketing Portfolio</p>
+  </footer>
+
+</body>
+</html>
